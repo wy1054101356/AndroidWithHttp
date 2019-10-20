@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbarStyle="outsideInset" >
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dip"
+        >
+
+        <TextView
+            android:id="@+id/tv_stu_text_id"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            android:gravity="center_vertical|right"
+            android:text="学号："
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_stu_id"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_alignTop="@id/tv_stu_text_id"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/tv_stu_text_id"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView android:id="@+id/tv_name_text"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="5dip"
+            android:layout_below="@id/tv_stu_text_id"
+            android:layout_alignLeft="@id/tv_stu_text_id"
+            android:layout_marginBottom="5dip"
+            android:textSize="16sp"
+            android:text="姓名："
+            />
+
+        <EditText android:id="@+id/et_name"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_toRightOf="@id/tv_name_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_name_text"
+            android:hint="请输入姓名"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dip"/>
+
+        <TextView android:id="@+id/tv_age_text"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="5dip"
+            android:layout_below="@id/tv_name_text"
+            android:layout_marginBottom="5dip"
+            android:textSize="16sp"
+            android:text="年龄："
+            />
+
+        <EditText android:id="@+id/et_age"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_toRightOf="@id/tv_age_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_age_text"
+            android:hint="请输入年龄"
+            android:paddingLeft="20dip"
+            android:maxLength="3"
+            android:inputType="number"
+            />
+
+        <TextView android:id="@+id/tv_sex_text"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:gravity="center_vertical|right"
+            android:layout_below="@id/tv_age_text"
+            android:layout_alignLeft="@id/tv_age_text"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            android:text="性别："
+            android:textSize="16sp"
+            />
+
+        <RadioGroup
+            android:id="@+id/rg_sex"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@id/tv_sex_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_sex_text"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_sex_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="男"
+                android:textSize="16sp" />
+
+            <RadioButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女"
+                android:id="@+id/rb_sex_female"
+                android:layout_weight="1"
+                android:textSize="16sp">
+            </RadioButton>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_phone_text"
+            android:layout_width="80dip"
+            android:layout_height="40dip"
+            android:layout_alignBottom="@+id/tv_sex_text"
+            android:layout_marginBottom="-48dp"
+            android:gravity="center_vertical|right"
+            android:text="院系："
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_below="@+id/rg_sex"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@id/tv_phone_text"
+            android:hint="请输入院系"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="20dip" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_phone"
+            android:layout_marginStart="46dp"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/btn_clear"
+            android:layout_toRightOf="@+id/btn_clear"
+            android:text="修改"></Button>
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_phone"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="43dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="16dp"
+            android:text="重置"></Button>
+    </RelativeLayout>
+</ScrollView>
+
